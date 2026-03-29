@@ -1,0 +1,34 @@
+!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zgłoszenie Projektu</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .alert { background: #fdecea; border-left: 5px solid #e74c3c; padding: 15px; color: #c0392b; margin-bottom: 20px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .full-width { grid-column: 1 / -1; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        button { background: #3498db; color: white; padding: 12px 30px; border: none; border-radius: 6px; cursor: pointer; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><h1>Zgłoszenie zadania projektowego</h1></header>
+        <section class="alert">⚠ Pole "Tytuł zadania" jest wymagane</section>
+        <form>
+            <div class="form-grid">
+                <div class="full-width"><label>Tytuł zadania</label><input type="text" name="task_title"></div>
+                <div><label>Przypisany do</label><input type="text" name="task_assignee"></div>
+                <div><label>Priorytet</label><select name="task_priority"><option>Wysoki</option></select></div>
+                <div class="full-width"><label>Opis zadania</label><textarea name="task_description" rows="5"></textarea></div>
+                <div class="full-width"><button type="submit">Zapisz zadanie</button></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
